@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         R.drawable.img2,
         R.drawable.img23
     )
+    private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
             recyclerView.adapter = adapter
             for (coun in imageList.indices){
-                adapter.addPlant(Plant(imageList[coun], "Пупсики $coun"))
+                adapter.addPlant(Plant(R.drawable.img15, "Пупсики $coun"))
             }
 
             button.setOnClickListener {
@@ -58,11 +59,7 @@ class MainActivity : AppCompatActivity() {
 //                val plant = Plant(imageList[count], "Пупсики $count")
 //                adapter.addPlant(plant)
 //                count++
-                val inten = Intent(this@MainActivity,MainActivity2::class.java)
-                startActivity(inten)
-            }
-            button3.setOnClickListener {
-                var inten = Intent(this@MainActivity,MainActivity3LinearLayout::class.java)
+                var inten = Intent(this@MainActivity,MainActivity2::class.java)
                 startActivity(inten)
             }
         }
