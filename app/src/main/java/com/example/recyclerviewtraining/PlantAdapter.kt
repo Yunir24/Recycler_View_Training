@@ -16,7 +16,7 @@ class PlantAdapter: RecyclerView.Adapter<PlantAdapter.PlantHolder>() {
         val binding = MyPhotoBinding.bind(item)
         fun bind(plant: Plant) = with(binding) {
             imageView.setImageResource(plant.imageId)
-            textView.text = plant.title
+            textView.text = "Пупсики"
         }
     }
 
