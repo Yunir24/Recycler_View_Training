@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#67A2AA">
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img10"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_Line"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_Line"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp"
+            />
+
+
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/zagolovok_for_me"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/poster"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start_Line"
+        app:layout_constraintTop_toBottomOf="@id/banner"
+        app:layout_goneMarginEnd="16dp" />
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img7"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/end_Line"
+        app:layout_constraintTop_toBottomOf="@id/banner" />
+
+    <TextView
+        android:id="@+id/directorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/director_yunir"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintStart_toStartOf="@id/start_Line"
+        app:layout_constraintTop_toBottomOf="@id/tittle" />
+
+    <TextView
+        android:id="@+id/director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/yunir_dautov"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBaseline_toBaselineOf="@id/directorLabel"
+        app:layout_constraintEnd_toStartOf="@id/poster"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@id/directorLabel" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/title_section_bottom_barrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tittle, poster, directorLabel,director" />
+
+    <TextView
+        android:id="@+id/short_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/end_Line"
+        app:layout_constraintStart_toStartOf="@id/start_Line"
+        app:layout_constraintTop_toBottomOf="@id/title_section_bottom_barrier"
+        android:text="@string/in_this_place_we_add_ed_some_text_about_my_life_and_my_choose_and_my_problems_in_my_life" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/actors_Id"
+        android:layout_width="0dp"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="actor_1,actor_2,actor_3,actor_4"
+        app:flow_firstHorizontalBias="0"
+        app:flow_horizontalGap="8dp"
+        app:flow_horizontalStyle="packed"
+        app:flow_verticalGap="8dp"
+        app:flow_verticalStyle="spread_inside"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintEnd_toEndOf="@id/end_Line"
+        app:layout_constraintStart_toStartOf="@id/start_Line"
+        app:layout_constraintTop_toBottomOf="@id/actors_label" />
+
+    <TextView
+        android:id="@+id/actors_label"
+        style="@style/TextAppearance.Material3.HeadlineMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actors"
+        app:layout_constraintStart_toStartOf="@id/start_Line"
+        app:layout_constraintTop_toBottomOf="@id/short_description" />
+
+    <TextView
+        android:id="@+id/actor_1"
+        style="@style/TextAppearance.Material3.HeadlineSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="6dp"
+        android:text="Actor Mact0"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/actor_2"
+        style="@style/TextAppearance.Material3.HeadlineSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="6dp"
+        android:text="Actor Mact1йц"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/actor_3"
+        style="@style/TextAppearance.Material3.HeadlineSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="6dp"
+        android:text="Actor Mact2"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/actor_4"
+        style="@style/TextAppearance.Material3.HeadlineSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="6dp"
+        android:text="Actor Mact3"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_Like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:layout_marginEnd="8dp"
+        android:text="Like"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/button_Share"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/start_Line"
+        app:layout_constraintTop_toBottomOf="@id/actors_Id" />
+
+    <Button
+        android:id="@+id/button_Share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:text="Share"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/button_Watch"
+        app:layout_constraintStart_toEndOf="@id/button_Like"
+        app:layout_constraintTop_toBottomOf="@id/actors_Id" />
+
+    <Button
+        android:id="@+id/button_Watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:text="Watch"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/end_Line"
+        app:layout_constraintStart_toEndOf="@id/button_Share"
+        app:layout_constraintTop_toBottomOf="@id/actors_Id" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

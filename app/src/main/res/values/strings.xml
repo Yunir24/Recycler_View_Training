@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Recycler View Training</string>
+    <string name="its_we">its we</string>
+    <string name="add_new_photo">Add new photo</string>
+    <string name="zagolovok_for_me">zagolovok for me</string>
+    <string name="director_yunir">Director: </string>
+    <string name="yunir_dautov">Yunir Dautov</string>
+    <string name="in_this_place_we_add_ed_some_text_about_my_life_and_my_choose_and_my_problems_in_my_life">In this place we add\'ed some text about my life and my choose and my problems in my life</string>
+</resources>
